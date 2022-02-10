@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+{% block title %}News actu{% endblock %}
+{% block body %}
+    {% for article in articles %}
+        <div class='divArticle'>
+            <h2>{{article["title"]}}</h2>
+            <div>
+                <img src='{{article["image"] }}' alt='Image'>
+            </div>
+            <p>{{article["description"]}}</p>
+            <a href='./article/{{ loop.index - 1 }}'>Lire l'article</a>
+        </div>
+    {% endfor %}
+{% endblock %}

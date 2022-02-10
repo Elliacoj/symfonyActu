@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+{% block title %}Article{% endblock %}
+{% block body %}
+        <div class='article'>
+            <h2>{{article["title"]}}</h2>
+            <div>
+                <img src='{{article["image"] }}' alt='Image'>
+            </div>
+            <p>{{article["content"]|nl2br}}</p>
+            <p><b>{{article["author"]|upper}}</b></p>
+            <a href='/'>Retour</a>
+        </div>
+{% endblock %}
